@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
+
+    }
+}
+
+.sobre-nosotros__titulo {
+    font-family: v.$fuenteDemo;
+    font-size: 4rem;
+    color: v.$claro;
+    padding-top: 8rem;
+}
+
+.nosotros__imagen {
+    border-radius: 10px;
+    box-shadow: 0 0 40px 5px v.$tinto;
+}
+
+// .sobre-nosotros__texto {
+//     margin: 0;
+// }

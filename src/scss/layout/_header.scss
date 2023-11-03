@@ -1,0 +1,148 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-promos {
+    display: block;
+    color: #FFF;
+    background-color: #000000;
+    font-size: 2rem;
+    font-family: v.$fuenteAlternativa;
+    height: 4rem;
+    letter-spacing: 1rem;
+    align-items: center;
+}
+// Botones Animacion
+
+.navegacion-principal a {
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all .3s;
+    }
+    &:hover:before {
+        width: 100%;
+    }
+}
+.bordercenter{
+    &:before {
+        left: 50%
+    }
+    &:hover:before {
+        left: 0;
+    }
+}
+
+//Ajustes puntos muertos
+.header {
+    display: block ;
+    background-color: v.$tinto;
+}
+.logo {
+    text-align: center;
+    height: 50px;
+    width: auto;
+}
+.header__logo {
+    padding: 1rem;
+    display: inline;
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-right: 50px;
+}
+.navegacion-principal {
+    
+    a{
+        margin: 5px;
+        display: grid;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #FFF;
+        font-size: 1.5rem
+    }
+}
+
+.container-icon {
+    display: inline-block;
+    height: auto;
+    max-width: 50px;
+}
+.contenido-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+//Ajustes de movil
+@include m.telefono {
+    .header__logo {
+        padding: 0;
+        display: inline-block;
+        margin-right: 50px;
+    }
+    .contenedor-icono {
+        display: inline;    
+
+        }
+        .container-cart-icon {
+            width: 50px;
+            height: 50px;
+            display: inline;
+        }
+        .count-products {
+            margin-left: 0;
+        }
+    .contenido-header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+//Version de tableta en adelante
+@include m.tablet {
+    .contenido-header .navegacion-principal  {
+        display: flex;
+    }
+    .contenido-header{
+        display: flex;
+        padding-top: 0;
+        padding-bottom: 0rem;
+    }
+    .container-icon .container-cart-icon {
+        display: inline;
+    }
+    .container-cart-icon {
+        display: flex;
+        margin-left: 0;
+        margin-top: 2px;
+        margin-bottom: auto;
+    }
+    .header__logo {
+        padding: 0;
+
+        height: 5rem;
+        width: auto;
+        margin: 1rem;
+        
+    }
+    .navegacion-principal a{
+        text-align: center;
+        margin: auto 2rem;
+    }
+    
+    .c3 {
+        order: 1;
+    }
+    .c4 {
+        order: 3;
+
+    }
+}

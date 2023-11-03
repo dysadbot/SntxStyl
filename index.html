@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=ASdT1Om9-sSbaSPIzLTOMTXmOiQWnBrHRB6ufDt-1DN8SE3xB-w_oWuYD7wY9RErn_Uqb2kjSjk68Nv3&currency=USD"></script>
+    
+</head>
+
+<body>
+    <marquee class="contenedor-promos"> Rebajas desde el 25% de descuento hasta el 25 de Abril - Envio gratis a toda la republica</marquee>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <a class="c1 header__logo" href="index.html">
+                <img class="logo" src="img/logo.jpg"   alt="Logotipo">
+            </a>
+            
+
+        <!--Aqui empieza el carrito-->
+            <div class="c4 container-icon">
+                <div class="container-cart-icon">
+                    <div class="contenedor-icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M6 5l14 1l-1 7h-13" />
+                        </svg>
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>
+                    </div> <!-- .contenedor-icono-->
+                </div>
+                
+
+                <div class="container-cart-products hidden-cart">
+                    <div class="row-product">
+						<div class="cart-product">
+							<div class="info-cart-product">
+								
+							</div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="icon-close"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+						</div> <!-- .cart-product -->
+                    </div>
+                    <div class="contenedor_paytotal">
+                        <div class="contenedor_total">
+                            <div class="cart-total">
+                                <h3>Total:</h3>
+                                <span class="total-pagar">$0</span>
+                            </div>
+                        </div>
+                        <div class="contenedor_pagar">
+                            <div id="paypal-button-container"></div>
+                            <p id="result-message"></p>
+                        </div>
+                        <p class="cart-empty">El carrito está vacío
+                    </div>
+
+
+					<!-- <div class="cart-total">   ORIGINAL
+						<h3>Total:</h3>
+						<span class="total-pagar">$0</span>
+					</div>
+                    <p class="cart-empty">El carrito está vacío</p> -->
+
+
+				</div> <!-- .container-cart-products .hidden-cart -->
+            </div> <!-- .container-icon-->
+            
+            <nav class="navegacion-principal">
+                <a class="bordercenter efecto c2" href="nosotros.html">Sobre Nosotros</a>
+            </nav>
+        </div> <!-- .contenedor .contenido-header-->
+        
+    </header>
+    
+    <div class="contenedor-slider">
+        <div class="slider" id="slider">
+            <div class="slider__section">
+                <img src="img/sliderUno.png" alt="" class="slider__img"></div>
+            <div class="slider__section">
+                <img src="img/sliderDos.jpg" alt="" class="slider__img"></div>
+            <div class="slider__section">
+                <img src="img/sliderTres.png" alt="" class="slider__img"></div>
+            <div class="slider__section">
+                <img src="img/sliderCuatro.jpg" alt="" class="slider__img"></div>
+                
+        </div>
+    </div> 
+
+    
+    <main class="contenedor-productos">
+        
+        <h1> Nuestros Productos </h1>
+        <div class="grid">
+
+            <div class="producto">
+                    <img class="producto__imagen" src="img/1.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">VueJS</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/2.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">AngularJS</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/3.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">ReactJS</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/4.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">Redux</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton">
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/5.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">Node.js</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/6.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">SASS</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/7.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">HTML5</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/8.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">Github</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/9.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">BulmaCSS</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/10.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">TypeScript</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/11.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">Drupal</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/12.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">JavaScript</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/13.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">GraphQL</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+            <div class="producto">
+                    <img class="producto__imagen" src="img/14.jpg" alt="imagen camisa"></a>
+
+                    <div class="producto__informacion">
+                        <h2 class="producto__nombre">WordPress</h2>
+                        <p class="producto__precio">25</p>
+                        <select class="talla-option">
+                            <option disabled selected>Seleccionar Talla</option>
+                            <option>Chica</option>
+                            <option>Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <div class="alinear-boton"> 
+                            <a class="boton  boton--primario agregar-carrito">Agregar al carrito</a>
+                        </div>
+                    </div>
+                
+            </div>  <!--.producto-->
+
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+        </div>
+
+    </main>
+
+    <footer class="footer"> 
+        <div class="contenedor-footer">
+                <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Syntax<span class="logo__bold">Style</span></h1>
+                </a>
+                <p class="efecto_prueba">© 2023  Todos los derechos reservados </p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script src="client/app.js"></script>
+    <script src="build/js/slider.js"></script>
+    <script src="build/js/carrito.js"></script>
+
+</body>
+
+</html>

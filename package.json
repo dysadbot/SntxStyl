@@ -1,0 +1,29 @@
+{
+  "name": "tiendaecommerce",
+  "version": "1.0.0",
+  "description": "proyecto ecommerce ",
+  "main": "src/js/server/server.js",
+  "scripts": {
+    "start": "node src/js/server/server.js",
+    "sass": "sass --watch src/scss:build/css",
+    "css": ""
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "dylanR",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.68.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  }
+}

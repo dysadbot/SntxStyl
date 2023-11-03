@@ -1,0 +1,247 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+// Icono de carrito y contador
+.contenedor-icono {
+    &:hover {
+        cursor: pointer;
+    }
+}
+.container-icon{
+    position: relative;
+    margin-left: auto;
+    margin-top: 5px;
+}
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#contador-productos{
+    font-size: 12px;
+}
+
+// Ventana Carrito
+.container-cart-products{
+
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #fff;
+    width: 300px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 10);
+    border-radius: 10px;
+    @include m.telefono {
+        right: 0px;
+        background-color: #fff;
+        width: 300px;
+        z-index: 1;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 10);
+        border-radius: 10px;
+    }
+    @include m.tablet {
+        right: 50px;
+        background-color: #fff;
+        width: 480px;
+        z-index: 1;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 10);
+        border-radius: 10px;
+
+    }
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: .9;
+}
+
+.titulo-producto-carrito{
+    color: #000;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    @include m.telefono {
+        font-size: 1.5rem ;
+    }
+    @include m.tablet {
+        font-size: 2rem;
+    }
+}
+
+.talla-producto-carrito {
+    color: #000;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-top: 20px;
+
+    @include m.telefono {
+        font-size: 1.5rem ;
+    }
+    @include m.tablet {
+        font-size: 2rem;
+    }
+}
+
+.precio-producto-carrito{
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem ;
+    margin-left: 10px;
+    @include m.telefono {
+        font-size: 1.5rem ;
+    }
+    @include m.tablet {
+        font-size: 2rem;
+    }
+}
+
+.cantidad-producto-carrito{
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    @include m.telefono {
+        font-size: 1.5rem ;
+    }
+    @include m.tablet {
+        font-size: 2rem;
+    }
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+        margin: 0 0 0 0;
+        font-size: 1.5rem;
+        @include m.telefono {
+            font-size: 1.5rem ;
+        }
+        @include m.tablet {
+            font-size: 2rem;
+        }
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: normal;
+    font-size: 1.5rem;
+    @include m.telefono {
+        font-size: 1.5rem ;
+    }
+    @include m.tablet {
+        font-size: 2rem;
+    }
+}
+
+.hidden-cart{
+    display: none;
+}
+
+.cart-empty {
+    padding: 20px;
+    text-align: center;
+    color: #000;
+}
+.hidden{
+    display: none;
+}
+
+
+
+// BOTON PAGAR
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80px;
+	background: v.$tinto;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+.btn span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+.btn.cinco span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+
+.btn.cinco .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: 150px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+
+.btn.cinco svg {
+	color: #fff;
+	width: 35px;
+	height: 35px;
+}
+
+.btn.cinco:hover {
+	background: #2f9b05;
+}
+
+.btn.cinco:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+
+.btn.cinco:hover span {
+	left: 20px;
+}

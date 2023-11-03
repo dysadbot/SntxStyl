@@ -1,0 +1,334 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+// Estilo 'lo mas vendido'
+    .contenedor-productos h1 {
+        padding: 2rem;
+        color: #fff;
+        font-family: v.$fuenteDemo;
+        font-size: auto;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+    }
+@include m.tablet {
+    .contenedor-productos{
+        padding: 2rem;
+        font-family: v.$fuenteDemo;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1rem;
+
+    }
+}
+.contenedor-productos {
+    margin: 0 auto;
+}
+
+/** Grid **/
+    /** Grid **/
+.grid {
+    display: grid;
+    gap: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/** Productos **/
+a {
+    cursor: pointer;
+}
+.producto {
+    max-width: 100%;
+    justify-items: center;
+    display: grid;
+    padding: 10px;
+}
+
+.producto__nombre {
+    font-size: 4rem;
+}
+
+
+.producto__nombre,
+.producto__precio {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: v.$fuenteDemo;
+    text-align: left;
+    line-height: 1.2;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.producto__imagen {
+align-self: center;
+font-family: v.$fuenteDemo;
+box-shadow: 0px 0px 20px black;
+
+width: 100%
+}
+.producto__informacion {
+    width: 100%;
+    display: grid;
+    justify-items: start;
+
+}
+
+@include m.tablet {
+    .producto__nombre,
+    .producto__precio {
+        font-size: xx-large;
+        font-family: v.$fuenteDemo;
+        margin-left: 2rem;
+        text-align: left;
+        line-height: 1.2;
+    }
+    .producto__imagen {
+        align-self: center;
+        width: 85%;
+    }
+}
+@include m.desktop {
+    .producto__nombre,
+    .producto__precio {
+        margin-left: 5rem;
+    }
+}
+
+
+/** Graficos **/
+.grafico {
+    min-height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    grid-column: 1 / 3;
+    margin-bottom: 1rem;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 10px black;
+}
+.grafico--camisas {
+    grid-row: 2 / 3;
+    background-image: url(../../../img/grafico1.jpg);
+}
+.grafico--node {
+    background-image: url(../../../img/grafico2.jpg);
+    grid-row: 8 / 9;
+    object-fit: cover;
+    object-position: bottom;
+}
+@include m.telefono {
+    .grafico--node {
+        background-position: center;
+
+    }
+    .grafico--camisas {
+        background-position: center;
+
+    }
+}
+@media (min-width: 768px) {
+    .grafico--node {
+        background-position: center;
+        max-width: 90%;
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+        margin-left: 3rem;
+        border-radius: 5px;
+    }
+    .grafico--camisas{
+        background-position: center;
+        max-width: 91%;
+        text-align: center;
+        margin-left: 30px;
+        border-radius: 5px;
+    }
+    
+}
+
+@include m.desktop {
+    .grafico--node {
+        background-position: center;
+        margin-right: 3rem;
+        align-items: center;
+        max-width: 91%;
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+        margin-left: 4rem;
+        border-radius: 5px;
+    }
+    .grafico--camisas{
+        background-position: center;
+        max-width: 91%;
+        text-align: center;
+        margin-left: 4rem;
+        border-radius: 5px;
+    }
+}
+// boton
+.alinear-boton {
+    display: grid;
+    max-width: 100%;
+    justify-content: start;
+    @include m.telefono {
+        margin-top: 1rem;
+    }
+    @include m.tablet {
+        margin-left: 1rem;
+
+    }
+    @include m.desktop {
+        margin-left: 3rem;
+
+    }
+}
+.boton {
+    box-shadow: 0px 0px 5px v.$claro;
+    &:hover {
+        box-shadow: none;
+    }
+    background-color: v.$tinto;
+    display: grid;
+    flex-direction: column;   
+    text-decoration: none;
+    padding:  1.5rem ;
+    text-align: center;
+    margin-top: 1rem;
+    width: 140%;
+    font-size: 1rem;
+    position: relative;
+    white-space: nowrap;
+}
+@include m.telefono {
+    .boton{
+        
+        display: grid;
+        flex-direction: column;   
+        text-decoration: none;
+        padding: 0 auto  ;
+        width: 130%;
+        font-family: v.$fuenteDemo;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        position: relative;
+        margin: auto; 
+        white-space: nowrap;
+    }
+}
+@include m.tablet {
+    .boton{
+        display: grid;
+        justify-content: center;
+        flex-direction: column;   
+        text-decoration: none;
+        padding: auto  ;
+        width: 100%;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: v.$fuenteDemo;
+        letter-spacing: 1px;
+        position: relative;
+        margin-top: 20px; 
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+}
+    @include m.desktop {
+        .boton {
+        display: grid;
+        justify-items: center;
+        flex-direction: column;   
+        text-decoration: none;
+        width: 100%;
+        padding: auto  ;
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: v.$fuenteDemo;
+        letter-spacing: 1px;
+        position: relative;
+        margin-top: 20px; 
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+}
+
+    
+
+
+.boton--primario{
+    color: #fff;
+}
+
+@include m.telefono {
+    .boton--primario{
+        text-align: center;
+    }
+}
+.boton--primario::after, .boton--primario::before{
+    border: 3px solid #fff;
+    content: "";
+    position: absolute;
+    width: calc(100% );
+    height: calc(100% );
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.boton--primario:hover::after{
+    transform: translate(-5px, -5px);
+    z-index: 1;
+
+}
+
+.boton--primario:hover::before{
+    transform: translate(5px, 5px);
+    z-index: 1;
+
+}
+
+
+.talla-option {
+    
+    width: 60%;
+    display: grid;
+    margin-left: 2rem;
+    border-color: v.$claro ;
+    border-width: .3rem;
+    border-style: solid;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    color: #fff;
+    height: 3rem;
+    
+    option {
+        color: black;
+        background-color: #fff;
+    }
+
+    @include m.telefono {
+        font-size: 1rem;
+
+    }
+    @include m.tablet {
+        font-size: 1.5rem;
+
+    }
+    @include m.desktop {
+        font-size: 2rem;
+        margin-left: 4rem;
+    }
+
+}
+
+

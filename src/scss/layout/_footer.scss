@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.footer {
+    background-color: v.$tinto;
+}
+.contenedor-footer{
+    padding-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.logo {
+    color: v.$claro;
+}
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+.barra {
+    padding-top: 3rem;
+}
+p {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+}
+
+// Efecto glitch
+.boton {
+    &:hover{
+        animation: 0.3s glitch infinite;
+    }
+}
+@keyframes glitch { //Animacion
+    0%{
+        text-shadow: red -4px 0, cyan 4px 0;
+    }
+    50%{
+        text-shadow: red 4px 0, cyan -4px 0; 
+    }
+    100%{
+        text-shadow: red -4px 0, cyan 4px 0;
+    }
+}
+
